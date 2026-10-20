@@ -15,11 +15,10 @@ async function main() {
         ]);
         console.log('Данные добавлены.');
 
-        // 4. Выборка и вывод в консоль
         const cars = await Car.findAll();
         
         console.log('\n--- Список автомобилей ---');
-        // toJSON() нужен для получения чистых данных без служебных методов Sequelize
+
         cars.forEach(car => {
             console.log(car.toJSON());  
         });
